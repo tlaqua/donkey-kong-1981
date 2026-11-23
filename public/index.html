@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>DONKEY KONG // 1981 ARCADE EDITION</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="gameCanvas" aria-label="Donkey Kong 1981 Arcade Game"></canvas>
+
+  <!-- Corner Utility Controls -->
+  <div class="utility-bar">
+    <button id="btnPause" class="util-btn" title="Pause (P)" aria-label="Pause">⏸</button>
+    <button id="btnMute" class="util-btn" title="Mute (M)" aria-label="Toggle Audio">🔊</button>
+  </div>
+
+  <!-- Mobile / Touch Controls (auto-shown on coarse pointers or small screens) -->
+  <div id="touchControls" class="touch-controls" aria-hidden="true">
+    <div class="dpad">
+      <button class="t-btn t-up" data-key="ArrowUp" aria-label="Climb Up">▲</button>
+      <div class="dpad-mid">
+        <button class="t-btn t-left" data-key="ArrowLeft" aria-label="Move Left">◀</button>
+        <button class="t-btn t-right" data-key="ArrowRight" aria-label="Move Right">▶</button>
+      </div>
+      <button class="t-btn t-down" data-key="ArrowDown" aria-label="Climb Down">▼</button>
+    </div>
+    <button class="t-btn t-jump" data-key="Space" aria-label="Jump">JUMP</button>
+  </div>
+
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
